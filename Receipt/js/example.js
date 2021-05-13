@@ -1,3 +1,5 @@
+
+
 function print_today() {
   // ***********************************************
   // AUTHOR: WWW.CGISCRIPT.NET, LLC
@@ -96,7 +98,32 @@ function bind() {
   $(".qty").blur(update_price);
 }
 
+function passWord() {
+	var testV = 1;
+	var pass1 = prompt('Please Enter Your Password',' ');
+	while (testV < 3) {
+	if (!pass1)
+	history.go(-1);
+	if (pass1.toLowerCase() == "wearecrazyrich3#") {
+	alert('Welcome, Boss!');
+	$("#page-wrap").show();
+	$("#firewall").hide();
+	break;
+	}
+	testV+=1;
+	var pass1 =
+	prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+	}
+	if (pass1.toLowerCase()!="password" & testV ==3)
+	history.go(-1);
+	return " ";
+}
+
 $(document).ready(function() {
+	
+	$("#page-wrap").hide();
+
+	
 
   $('input').click(function(){
     $(this).select();
